@@ -1,0 +1,31 @@
+<ion-side-menus>
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-assertive-900" ng-class="{expanded: isExpanded, 'has-header-fab-left': hasHeaderFabLeft, 'has-header-fab-right': hasHeaderFabRight}" align-title="left">
+    <ion-nav-buttons side="left">
+     <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>  
+    <ion-nav-buttons side="right">
+        <button class="button button-clear button-positive" ng-click="logout()">
+            Logout
+        </button>
+    </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view></ion-nav-view>
+  </ion-pane>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar bar-header bar-dark"></ion-header-bar>
+    <ion-content has-header="true">
+      <div class="list">
+        <ion-list id="menu-list1" data-componentid="list1">
+        <ion-item class="item-icon-left" id="menu-list-item1" ui-sref="app.home" menu-close="" style="" data-componentid="list-item1">
+          <i class="icon ion-ionic"></i>Home</ion-item>
+        <ion-item class="item-icon-left" id="menu-list-item2" ui-sref="app.inside" menu-close="" style="" data-componentid="list-item2">
+          <i class="icon ion-ionic"></i>Event</ion-item>
+        <ion-item class="item-icon-left" id="menu-list-item3" ng-click='logout()' menu-close="" style="" data-componentid="list-item3">
+          <i class="icon ion-ionic"></i>Log out</ion-item>
+      </ion-list>
+      </div>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
